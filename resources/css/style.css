@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,800;1,900&display=swap');
+
+:root {
+  --font: 'Montserrat', sans-serif;
+  --color-title: #995038;
+}
+a:hover
+{
+  cursor: pointer;
+}
+.container-fluid.ps-0.pe-0 {
+  overflow-x: clip;
+}
+
+/*BEGIN: #main-header*/
+body {
+  background-color: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pageview {
+
+  background-image: url(../img/noel/bg123.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+
+}
+.box-gift
+{
+  background-image: url(../img/noel/Khungqua.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.gift
+{
+
+}
+.gift img
+{
+  width: 80%;
+  padding: 150px 0px 100px 0px;
+  margin-left: 25px;
+  -webkit-animation: phonering-alo-circle-img-anim 2s infinite ease-in-out;
+  animation: phonering-alo-circle-img-anim 2s infinite ease-in-out;
+}
+@-webkit-keyframes phonering-alo-circle-img-anim {
+  0% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+
+  10% {
+      -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  20% {
+      -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+  }
+
+  30% {
+      -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  40% {
+      -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+  }
+
+  50% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+}
+.sec7
+{
+  padding-top: 30px;
+  margin-bottom: 120px;
+}
+.bxh
+{
+  position: relative;
+  background-image: url(../img/noel/bxhbg.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bxh tbody{
+  /* position: absolute;
+    z-index: 99;
+    width: 100%; */
+    /* background-image: url(../img/noel/bxhbg.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  top: -200px; */
+}
+.bxh .column
+{
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  font-size: 23px;
+}
+.bxh tr
+{
+  height: 64px;
+}
+.bxh tr.row-end {
+  height: 10px;
+}
+.bxh .column.col-18
+{
+  width: 15%;
+  
+}
+.bxh .column.col-18 p
+{
+ text-align: right;
+ margin-right: 50px;
+}
+.bxh .column.col-22
+{
+  width: 15%;
+}
+.bxh .column.col-27
+{
+  width: 27%;
+}
+.bxh .column.col-33
+{
+  width: 30%;
+}
+/* .bxh::before
+{
+  content: "";
+  position: absolute;
+  background-image: url(../img/noel/bxhbg.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  top: -200px;
+  left: 0;
+  z-index: 1;
+} */
+table, td, th {
+  border: 2px solid #3c000000;
+}
+.column img{
+  width: 49px;
+  margin-right: 35px;
+  float: right;
+}
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 5%;
+}
+.box-home
+{
+  text-align: right;
+}
+.img9
+{
+width: 14%;
+}
+.ndmodal
+{
+  background-image: url(../img/noel/bgthele.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* overflow: hidden; */
+}
+.ndmodal_ms
+{
+  background-image: url(../img/noel/bgphanthuong.png);
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 420px;
+
+  /* overflow: hidden; */
+}
+.ndmodal pre{
+  text-align: left; 
+    font-size: 11px;
+    color: #5d2700;
+    font-weight: 600;
+    margin-left: -10px;
+    margin-top: 75Px;
+    overflow-x: hidden;
+}
+.ndmodal_ms pre{
+  text-align: left; 
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: -25px;
+    margin-top: 30px;
+    overflow-x: hidden;
+}
+.text-popup-mb
+{
+  display: none;
+}
+.img3
+{
+
+  width: 75%;
+}
+
+.sec4 {
+  padding: 20px 0 30px 0  ;
+}
+.logo {
+  margin: 15px 0;
+}
+.sec1 {
+  padding-top: 20px;
+}
+
+.img1 {
+  width: 28%;
+}
+.img2 {
+  width: 47%;
+}
+.img4 {
+  margin-top: 120px;
+  width: 40%;
+}
+.img8{
+  width: 15%;
+  margin: 0px 80px 0px;
+}
+.footer {
+  width: 100%;
+  padding: 25px 15px;
+  background-color: #3C0000;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.footer-main span
+{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.footer-main-desc {
+  font-size: 15px;
+  color: #fff;
+  line-height: 2;
+  margin-top: 5px;
+
+}
+.footer-left
+{
+  width: 10%;
+  position: relative;
+}
+.footer-right
+{
+  position: relative;
+  width: 10%;
+}
+.img11
+{
+  position: absolute;
+    width: 120%;
+    z-index: 999;
+    top: -90px;
+    left: 0px;
+}
+.img12{
+  position: absolute;
+  width: 150%;
+  z-index: 999;
+  top: -100px;
+  right: 0px;
+}
+.footer-main {
+  text-align: center;
+  color: #fff;
+  width: 90%;
+}
+
+
+
+/* Bỏ button menu  */
+.collapse:not(.show) {
+  display: flex !important;
+}
+
+.nenmodal .nenmodal2 {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+  }
+  /* CSS bảng nội dung Modal */
+  .nenmodal .ndmodal {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  width:650px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+  border-radius:20px;
+  display: block;
+  position: absolute;
+ 
+  }
+   /* CSS bảng nội dung Modal */
+   .nenmodal .ndmodal_ms {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    width: auto;
+    z-index:2;
+    text-align:center;
+    padding:60px 30px;
+    box-sizing:border-box;
+    font-family:"Open Sans",sans-serif;
+    border-radius:20px;
+    display: block;
+    position: fixed;
+   
+    }
+  @media (max-width: 700px) {
+  .nenmodal .ndmodal {width:96%;}
+  }
+  @media (max-width: 700px) {
+    .nenmodal .ndmodal_ms {width:90%;}
+    }
+  /* CSS bao bọc của nút tắt Modal */
+  .nenmodal .closemodal {
+    text-align: right;
+
+    margin-bottom: -5px;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+ 
+  }
+  .nenmodal .closemodal_ms {
+    text-align: right;
+
+    margin-bottom: -5px;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+ 
+  }
+  /* CSS tieu de của Modal */
+  .titlemodal{
+  font-weight:bold;
+  font-size:20px;
+  margin-bottom:10px;
+  }
+  /* CSS nút tắt modal */
+  .closemodal button{
+    width:40px;
+    height:40px;
+    font-size:30px;
+    padding:0px;
+    border-radius:100%;
+    background: #33981f;
+    color: #f9ffac;
+    border:none;
+  }
+  .closemodal_ms button{
+    width:40px;
+    height:40px;
+    font-size:30px;
+    padding:0px;
+    border-radius:100%;
+    background: #33981f;
+    color: #f9ffac;
+    border:none;
+  }
+  .nenmodal.active .nenmodal2 {
+  display:block;
+  }
+  /* CSS hiệu ứng hiển thị Modal */
+  .nenmodal.active .ndmodal {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-40%) scale(1.4);
+  }
+  .nenmodal.active .ndmodal_ms {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1.2);
+    }
+  .nenmodal .closemodal {
+    text-align: right;
+    margin-bottom: -5px;
+    position: absolute;
+    right:-70px !important;
+    z-index: 99;
+ 
+  }
+  .nenmodal .closemodal_ms {
+    text-align: right;
+    margin-bottom: -5px;
+    position: absolute;
+    right:-70px !important;
+    z-index: 99;
+ 
+  }

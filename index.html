@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOEL</title>
+
+  <meta property="og:site_name" content="NOEL" />
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="NOEL" />
+  <meta property="og:description" content="NOEL" />
+  <meta name="description" content="NOEL" />
+  <meta property="og:image" content="./resources/img/noel/Thumb.png"/>
+  <meta property="og:image:width" content="630"/>
+  <meta property="og:image:height" content="315"/>
+  <meta property="og:image:alt" content=""/>
+  <meta property="article:publisher" content="" />
+  <meta property="article:author" content="" />
+
+<link rel="shortcut icon" href=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#000000">
+<meta name="msapplication-navbutton-color" content="#000000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <link rel="stylesheet" href="./resources/libs/bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="./resources/css/style.css" />
+  <link rel="stylesheet" href="./resources/css/reponsive.css">
+</head>
+
+
+
+<script type="text/javascript">
+  window.addEventListener('load', () => {
+    display_expt();
+  });
+
+  function Zero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+  function display_shw() {
+    var refresh = 1000;
+    mytime = setTimeout('display_expt()', refresh);
+  }
+
+  function display_expt() {
+    var countDownDate = new Date("Nov 20, 2023 08:12:16 GMT+0800").getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance > 0) {
+      document.getElementById("countdown").innerHTML = Zero(days) + "D " + Zero(hours) + "H " +
+        Zero(minutes) + "M " + Zero(seconds) + "S ";
+    }
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "Expired";
+    }
+    display_shw();
+  }
+</script>
+
+<body>
+  <style>
+    #snowflakeContainer{position:absolute;left:0px;top:0px;}
+    .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+    .snowflake:hover {cursor:default}
+  </style>
+  <!-- <div id='snowflakeContainer'>
+  <p class='snowflake'>❄</p>
+  </div> -->
+  <script>
+    
+    var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+    
+  </script>
+  <div class="pageview">
+    <section class="sec1">
+
+      <div class="container">
+
+        <div class="header-content" id="header-content">
+          <div class="box-home header-content-text text-right flex-column align-items-center justify-content-center">
+            <a href="https://loren.adnx.vn/"><img class="img9" src="./resources/img/noel/home.png" alt></a>
+            <a href="https://id.adnx.vn/"><img class="img9" src="./resources/img/noel/napthe.png" alt></a>
+          </div>
+          <div class="header-content-text d-flex flex-column align-items-center justify-content-center">
+
+            <img class="img1" src="./resources/img/noel/PNG2.png" alt>
+            <img class="img2" src="./resources/img/noel/lehoimuasam.png" alt>
+            <img class="img3" src="./resources/img/noel/giangsinhanlanh2.png" alt>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec3">
+      <div class="header-content-text text-center flex-column align-items-center justify-content-center">
+        <a onclick="document.getElementById('nenmodal-1').style.display='block'"><img class="img8"
+            src="./resources/img/noel/thele.png" alt></a>
+        <a href="https://id.adnx.vn/"><img class="img8" src="./resources/img/noel/thamgiangay.png" alt></a>
+
+
+      </div>
+
+      <div class="header-content-text d-flex flex-column align-items-center justify-content-center">
+        <img class="img4" src="./resources/img/noel/phathuong.png" alt>
+
+      </div>
+    </section>
+
+    <section class="sec5">
+      <div class="container">
+        <div class="box-gift">
+
+          <div class="gift">
+            <a onclick="document.getElementById('qua1').style.display='block'">
+              <img src="./resources/img/noel/qua1.png" alt=""></a>
+          </div>
+          <div class="gift">
+            <a onclick="document.getElementById('qua2').style.display='block'">
+              <img src="./resources/img/noel/qua2.png" alt=""></a>
+          </div>
+          <div class="gift">
+            <a onclick="document.getElementById('qua3').style.display='block'">
+              <img src="./resources/img/noel/qua3.png" alt=""></a>
+          </div>
+          <div class="gift">
+            <a onclick="document.getElementById('qua4').style.display='block'">
+              <img src="./resources/img/noel/qua4.png" alt=""></a>
+          </div>
+          <div class="gift">
+            <a onclick="document.getElementById('qua5').style.display='block'">
+              <img src="./resources/img/noel/qua5.png" alt=""></a>
+          </div>
+         
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sec7">
+      <div class="container">
+
+        <table class="bxh">
+
+          <!-- bỏ không thêm -->
+          <tr>
+            <td class="column col-18"> &emsp;</td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr>
+            <td class="column col-18"> &emsp;</td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr>
+            <td class="column col-18 cl3"> &emsp;</td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <!-- bắt đầu thêm ở đây  -->
+
+          <tr class="row4">
+            <td class="column col-18"> <img src="./resources/img/noel/hang1.png" alt=""></td>
+            <td class="column col-27">text 123 </td>
+            <td class="column col-22">text 456 </td>
+            <td class="column col-33">text 789 </td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18"> <img src="./resources/img/noel/hang2.png" alt=""></td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18"> <img src="./resources/img/noel/hang3.png" alt=""></td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+
+          <tr class="row4">
+            <td class="column col-18">
+              <p>4</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>5</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>6</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>7</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>8</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>9</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column col-18">
+              <p>10</p>
+            </td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <tr class="row-end">
+            <td class="column col-18"> &emsp;</td>
+            <td class="column col-27"> &emsp;</td>
+            <td class="column col-22"> &emsp;</td>
+            <td class="column col-33"> &emsp;</td>
+          </tr>
+          <!-- <tr>
+                <td class="column col-18"> &emsp;</td>
+                <td class="column col-27"> &emsp;</td>
+                <td class="column col-22"> &emsp;</td>
+                <td class="column col-33"> &emsp;</td>
+              </tr> -->
+
+        </table>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <img class="img11" src="./resources/img/noel/PNG1(1).png" alt="">
+      </div>
+      <div class="footer-main">
+        <span>Công ty Cổ phần ADNX </span>
+        <p class="footer-main-desc">
+          Giấy phép cung cấp dịch vụ trò chơi điện tử G1 trên mạng số: 224/GP-BTTTT do Bộ Thông tin và Truyền thông cấp
+          ngày 22/04/2021 </br>Quyết định phê duyệt nội dung kịch bản trò chơi điện tử G1 trên mạng số: 1963/QĐ-BTTTT do
+          Bộ Thông tin và Truyền thông cấp ngày 28/10/2022 </br>Copyright © 2022 ADNX
+        </p>
+
+      </div>
+      <div class="footer-right">
+        <img class="img12" src="./resources/img/noel/AdnX_Logo.png" alt="">
+      </div>
+    </footer>
+
+
+    <div class="nenmodal active" id="nenmodal-1" style="display: none;">
+      <div class="nenmodal2" id="nenmodal-2"></div>
+      <div class="ndmodal">
+        <div class="closemodal"><button onclick="document.getElementById('nenmodal-1').style.display='none'">×</button>
+        </div>
+        <!-- <img src="./resources/img/noel/bgthele.png" alt > -->
+        <pre class="text-popup">
+  Chào mừng hiệp sĩ đến với Lễ hội mua sắm mùa Noel
+  Thời gian tham gia: 20/12 - 03/12
+  Trong thời gian diễn ra sự kiện, bất kì người chơi đạt các mốc nạp có thể nhận được phần 
+  thưởng như sau:
+  1. Đối với cụm Reset:
+  - Nạp 50.000 KC nhận được thưởng mốc 1: Thưởng 4 Reset Card
+  - Nạp 100.000 KC nhận được thưởng mốc 2: Thưởng 9 Reset Card
+  - Nạp 300.000 KC nhận được thưởng mốc 3: Thưởng 18 Reset Card và có thể tùy ý chọn 1 Lệnh bài bất kỳ để đổi Class:
+  Lệnh Bài Dark Wizard
+  Lệnh Bài Dark Knight
+  Lệnh Bài Fairy Elf
+  Lệnh Bài Summoner
+  Lệnh Bài Magic Gladiator
+  Lệnh Bài Dark Lord
+  Lệnh Bài Grow Lancer
+  Lệnh Bài Rage Fighter
+- Nạp 750.000 KC sẽ nhận được thêm quyền lợi chuyển đổi class mà không bị giảm số lần reset
+  2. Đối với cụm Free
+  - Nạp 5 triệu nhận được thưởng mốc 1: Thưởng 60 vé Lucky
+  - Nạp 10 triệu nhận được thưởng mốc 2: Thưởng 135 vé Lucky
+  - Nạp 30 triệu nhận được thưởng mốc 3: Thưởng 270 vé Lucky và có thể tùy ý chọn 1 Lệnh Bài
+  Bất Kỳ để đổi Class
+  Lệnh Bài Dark Wizard
+  Lệnh Bài Dark Knight
+  Lệnh Bài Fairy Elf
+  Lệnh Bài Summoner
+  Lệnh Bài Magic Gladiator
+  Lệnh Bài Dark Lord
+  Lệnh Bài Grow Lancer
+  Lệnh Bài Rage Fighter
+  Người chơi xếp hạng 1 có thể nhận thêm quyền lợi đặc biệt
+  Đổi 1 món đồ bất kỳ sang đồ đồng cấp của Class Khác mà vẫn giữ nguyên đẳng cấp cường hóa và
+  5 Hộp Bí Ẩn
+  Ví dụ: Người chơi đứng đầu bảng xếp hạng nạp thẻ trong thời gian diễn ra sự kiện nạp 76 tr
+  Vậy phần thưởng người chơi này có thể nhận được sẽ là: 
+  14 Reset Card + 1 Thẻ Chuyển Class Tùy Chọn + 5 Hộp Bí Ẩn + 1 Quyền đổi trang bị đồng cấp
+  + 1 lần đổi class không bị giảm trừ số lần reset
+          </pre>
+
+          <div class="text-popup-mb">
+            <span>
+            Chào mừng hiệp sĩ đến với Lễ hội mua sắm mùa Noel
+            Thời gian tham gia: 20/12 - 03/12</span> <span>
+            Trong thời gian diễn ra sự kiện, bất kì người chơi đạt các mốc nạp có thể nhận được phần 
+            thưởng như sau:</span> <span>
+              1. Đối với cụm Reset: </span> <span></span>
+              - Nạp 50.000 KC nhận được thưởng mốc 1: Thưởng 4 Reset Card </span> <span>
+              - Nạp 100.000 KC nhận được thưởng mốc 2: Thưởng 9 Reset Card </span> <span>
+              - Nạp 300.000 KC nhận được thưởng mốc 3: Thưởng 18 Reset Card và có thể tùy ý chọn 1 Lệnh bài bất kỳ để đổi Class:</span> <span>
+              Lệnh Bài Dark Wizard</span> <span>
+              Lệnh Bài Dark Knight</span> <span>
+              Lệnh Bài Fairy Elf</span> <span>
+              Lệnh Bài Summoner</span> <span>
+              Lệnh Bài Magic Gladiator</span> <span>
+              Lệnh Bài Dark Lord</span> <span>
+              Lệnh Bài Grow Lancer</span> <span>
+              Lệnh Bài Rage Fighter</span> <span>
+            - Nạp 750.000 KC sẽ nhận được thêm quyền lợi chuyển đổi class mà không bị giảm số lần reset</span> <span>
+            2. Đối với cụm Free</span> <span>
+            - Nạp 5 triệu nhận được thưởng mốc 1: Thưởng 60 vé Lucky</span> <span>
+            - Nạp 10 triệu nhận được thưởng mốc 2: Thưởng 135 vé Lucky</span> <span>
+            - Nạp 30 triệu nhận được thưởng mốc 3: Thưởng 270 vé Lucky và có thể tùy ý chọn 1 Lệnh Bài
+            Bất Kỳ để đổi Class</span> <span>
+            Lệnh Bài Dark Wizard</span> <span>
+            Lệnh Bài Dark Knight</span> <span>
+            Lệnh Bài Fairy Elf</span> <span>
+            Lệnh Bài Summoner</span> <span>
+            Lệnh Bài Magic Gladiator</span> <span>
+            Lệnh Bài Dark Lord</span> <span>
+            Lệnh Bài Grow Lancer</span> <span>
+            Lệnh Bài Rage Fighter</span> <span>
+            Người chơi xếp hạng 1 có thể nhận thêm quyền lợi đặc biệt</span> <span>
+            Đổi 1 món đồ bất kỳ sang đồ đồng cấp của Class Khác mà vẫn giữ nguyên đẳng cấp cường hóa và
+            5 Hộp Bí Ẩn</span> <span>
+            Ví dụ: Người chơi đứng đầu bảng xếp hạng nạp thẻ trong thời gian diễn ra sự kiện nạp 76 tr
+            Vậy phần thưởng người chơi này có thể nhận được sẽ là: </span> <span>
+            14 Reset Card + 1 Thẻ Chuyển Class Tùy Chọn + 5 Hộp Bí Ẩn + 1 Quyền đổi trang bị đồng cấp
+            + 1 lần đổi class không bị giảm trừ số lần reset</span> <span>
+          </div>
+      </div>
+
+    </div>
+    <!-- qua1 -->
+    <div class="nenmodal active" id="qua1" style="display: none;">
+      <div class="nenmodal2" id="qua11"></div>
+      <div class="ndmodal_ms">
+        <div class="closemodal_ms"><button onclick="document.getElementById('qua1').style.display='none'">×</button>
+        </div>
+    
+        <pre class="text-popup">
+- HỘP QUÀ TOP 1: 
++ 14 Reset Card 
++ 1 Thẻ Chuyển Class Tùy Chọn 
++ 5 Hộp Bí Ẩn 
++ 1 Quyền đổi trang bị đồng cấp
++ 1 lần đổi class không bị giảm trừ số lần reset
+          </pre>
+      </div>
+
+    </div>
+    <!-- qua2 -->
+    <div class="nenmodal active" id="qua2" style="display: none;">
+      <div class="nenmodal2" id="qua22"></div>
+      <div class="ndmodal_ms">
+        <div class="closemodal_ms"><button onclick="document.getElementById('qua2').style.display='none'">×</button>
+        </div>
+
+        <pre class="text-popup">
+- HỘP QUÀ 750.000 KC:
+    + Cụm Reset : 
+    + 1 lần đổi class không bị giảm trừ số lần reset
+          </pre>
+      </div>
+
+    </div>
+    <!-- qua3 -->
+    <div class="nenmodal active" id="qua3" style="display: none;">
+      <div class="nenmodal2" id="qua33"></div>
+      <div class="ndmodal_ms">
+        <div class="closemodal_ms"><button onclick="document.getElementById('qua3').style.display='none'">×</button>
+        </div>
+
+        <pre class="text-popup">
+- HỘP QUÀ 300.000 KC:
+    + Cụm Reset :
+        + 18 Reset Card
+        + 1 Lệnh bài bất đổi Class
+        + Cụm Free
+        + 270 vé Lucky
+        + 1 Lệnh bài bất đổi Class                          
+          </pre>
+      </div>
+
+    </div>
+    <!-- qua4 -->
+    <div class="nenmodal active" id="qua4" style="display: none;">
+      <div class="nenmodal2" id="qua44"></div>
+      <div class="ndmodal_ms">
+        <div class="closemodal_ms"><button onclick="document.getElementById('qua4').style.display='none'">×</button>
+        </div>
+
+        <pre class="text-popup">
+- HỘP QUÀ 100.000 KC:
+      + Cụm Reset :
+          + 9 Reset Card
+          + Cụm Free
+          + 135 vé Lucky                             
+          </pre>
+      </div>
+
+    </div>
+    <!-- qua5 -->
+    <div class="nenmodal active" id="qua5" style="display: none;">
+      <div class="nenmodal2" id="qua55"></div>
+      <div class="ndmodal_ms">
+        <div class="closemodal_ms"><button onclick="document.getElementById('qua5').style.display='none'">×</button>
+        </div>
+
+        <pre class="text-popup">
+- HỘP QUÀ 50.000 KC:
+      + Cụm Reset :
+          + 4 Reset Card
+          + Cụm Free
+          + 60 vé Lucky                            
+          </pre>
+      </div>
+
+    </div>
+
+
+
+    <script>
+      // Get the modal
+      var modal1 = document.getElementById('nenmodal-1');
+      var modal2 = document.getElementById('nenmodal-2');
+      var qua1 = document.getElementById('qua1');
+      var qua11 = document.getElementById('qua11');
+      var qua2 = document.getElementById('qua2');
+      var qua22 = document.getElementById('qua22');
+      var qua3 = document.getElementById('qua3');
+      var qua33 = document.getElementById('qua33');
+      var qua4 = document.getElementById('qua4');
+      var qua44 = document.getElementById('qua44');
+      var qua5 = document.getElementById('qua5');
+      var qua55 = document.getElementById('qua55');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal2) {
+          modal1.style.display = "none";
+        }
+        if (event.target == qua11) {
+          qua1.style.display = "none";
+        }
+        if (event.target == qua22) {
+          qua2.style.display = "none";
+        }
+        if (event.target == qua33) {
+          qua3.style.display = "none";
+        }
+        if (event.target == qua44) {
+          qua4.style.display = "none";
+        }
+        if (event.target == qua55) {
+          qua5.style.display = "none";
+        }
+      }
+      
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./resources/libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="./resources/js/slider.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.box-gift').slick({
+          dots: false,
+          infinite: true,
+          autoplay: true,
+          speed: 2000,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          prevArrow: false,
+          nextArrow: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                autoplay: true,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                autoplay: true,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 476,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                autoplay: true,
+                infinite: true,
+                dots: false
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      });
+    </script>
+</body>
+
+</html>
