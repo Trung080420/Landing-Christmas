@@ -17,7 +17,10 @@ body {
   background-color: #000;
   font-family: 'Montserrat', sans-serif;
 }
-
+.imgx
+{
+  width: 120%;
+}
 .pageview {
 
   background-image: url(../img/noel/bg123.png);
@@ -384,7 +387,7 @@ width: 14%;
     font-size:30px;
     padding:0px;
     border-radius:100%;
-    background: #33981f;
+    background: none;
     color: #f9ffac;
     border:none;
   }
@@ -394,7 +397,7 @@ width: 14%;
     font-size:30px;
     padding:0px;
     border-radius:100%;
-    background: #33981f;
+    background: none;
     color: #f9ffac;
     border:none;
   }
